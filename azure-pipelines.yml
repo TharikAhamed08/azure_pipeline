@@ -21,6 +21,12 @@ stages:
   - job: Build
     displayName: Build
     steps:
+    - task: Maven@4
+      inputs:
+        mavenPomFile: './pom.xml'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        goals: 'package'
     - task: Docker@2
       displayName: Build an image
       inputs:
