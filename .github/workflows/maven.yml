@@ -40,4 +40,4 @@ jobs:
       uses: docker/setup-docker-action@v4
 
     - name: Build Docker Image
-      uses: docker build -t tharikahamed/azuredockerimage .
+      run: docker build -t tharikahamed/azuredockerimage .
