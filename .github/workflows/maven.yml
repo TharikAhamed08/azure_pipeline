@@ -35,3 +35,9 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: java
+
+    - name: Set up Docker
+      uses: docker/setup-docker-action@v4
+
+    - name: Build Docker Image
+      uses: docker build -t tharikahamed/azuredockerimage .
