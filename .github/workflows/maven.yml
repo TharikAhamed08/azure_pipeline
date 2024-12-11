@@ -41,3 +41,9 @@ jobs:
 
     - name: Build Docker Image
       run: docker build -t tharikahamed/azuredockerimage .
+
+    - name: Login to Docker
+      uses: docker/login-action@v3
+      with: 
+        username: ${{ secrets.DOCKER_HUB_USERNAME }} 
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
