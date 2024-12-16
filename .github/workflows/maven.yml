@@ -50,9 +50,4 @@ jobs:
 
     - name: Push Docker Image to Docker Hub
       run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/azuredockerimage
-    
-  Test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Test Parallel
-      run: echo 'hello world'
+  
